@@ -911,25 +911,15 @@ a:hover { color: var(--red); }
 .restaurant-addr { font-size: 0.78rem; color: var(--grey-mid); }
 .restaurant-addr svg { vertical-align: -2px; margin-right: 4px; }
 
-/* ── Map embed ───────────────────────────────────────────────── */
-.map-embed {
-  margin-top: 40px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  height: 400px;
-}
-.map-embed iframe { display: block; }
-
-/* ── Dining map (Leaflet, fed from data/restaurants.json) ────── */
-.dining-map-wrap { margin-bottom: 32px; }
-.dining-map {
+/* ── Maps (Leaflet + CARTO Positron, fed from data/restaurants.json) ── */
+.map-wrap { margin-top: 40px; margin-bottom: 32px; }
+.site-map {
   height: 420px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--off-white);
 }
-.dining-map-note {
+.map-note {
   font-size: 0.78rem;
   color: var(--grey-mid);
   margin-top: 8px;
