@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Venue — LANET 2027</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+        crossorigin="anonymous" />
 </head>
 <body>
 
@@ -180,93 +183,21 @@
         <h2 class="section-title">Restaurants Near the Venue</h2>
         <p class="section-lead">A selection of restaurants within easy reach of Centro Cultural UFRGS.</p>
       </div>
-      <div class="card-grid grid-3">
 
-        <div class="card">
-          <div class="restaurant-type">Gaúcho</div>
-          <h3 class="restaurant-name">Restaurante Quintanilha</h3>
-          <p class="restaurant-desc">Classic gaúcho cuisine. Mon–Fri 11:30–14:30; Sat, Sun &amp; holidays 12:00–15:00.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>R. Cel. Vicente, 575, Centro Histórico</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Vegetarian</div>
-          <h3 class="restaurant-name">Prato Verde</h3>
-          <p class="restaurant-desc">Vegetarian restaurant with a varied daily menu.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua Santa Terezinha, 42, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Vegetarian</div>
-          <h3 class="restaurant-name">Restaurante Formosa</h3>
-          <p class="restaurant-desc">Popular vegetarian buffet in the Bom Fim neighbourhood.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Av. Osvaldo Aranha, 472, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Café</div>
-          <h3 class="restaurant-name">Café Angélica</h3>
-          <p class="restaurant-desc">Charming neighbourhood café ideal for a quick lunch or coffee.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua General João Telles, 301, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Vegetarian</div>
-          <h3 class="restaurant-name">Restaurante Ocidente</h3>
-          <p class="restaurant-desc">Well-established vegetarian spot on Avenida Osvaldo Aranha.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Av. Osvaldo Aranha, 960, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Vegetarian</div>
-          <h3 class="restaurant-name">Restaurante Suprem</h3>
-          <p class="restaurant-desc">Casual vegetarian buffet in Bom Fim.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>R. Santo Antônio, 877, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Market</div>
-          <h3 class="restaurant-name">Mercado Brasco</h3>
-          <p class="restaurant-desc">Gourmet market and food hall with multiple counters and seating.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua Fernandes Vieira, 286, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Gaúcho</div>
-          <h3 class="restaurant-name">Bourbon Carlos Gomes</h3>
-          <p class="restaurant-desc">High-end gaúcho cuisine with terrace, garden, and local wine list.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua Regente, 499, Bela Vista</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Bar &amp; Restaurant</div>
-          <h3 class="restaurant-name">Press Cais do Porto</h3>
-          <p class="restaurant-desc">Bar and restaurant on the Guaíba waterfront — great views.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Av. Mauá, 1050, Armazém A7</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Japanese</div>
-          <h3 class="restaurant-name">Sambô Sushi</h3>
-          <p class="restaurant-desc">Sushi and Japanese cuisine in the Bom Fim neighbourhood.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua Fernandes Vieira, 502, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">Pizza</div>
-          <h3 class="restaurant-name">Ciao Pizzeria Napoletana</h3>
-          <p class="restaurant-desc">Authentic Neapolitan pizza in a relaxed setting.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Rua General João Telles, 294, Bom Fim</div>
-        </div>
-
-        <div class="card">
-          <div class="restaurant-type">French</div>
-          <h3 class="restaurant-name">Le Bistrot</h3>
-          <p class="restaurant-desc">Classic French bistro with a relaxed atmosphere.</p>
-          <div class="restaurant-addr"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Alameda Alípio César, 22, Boa Vista</div>
-        </div>
-
+      <div class="dining-map-wrap">
+        <div id="dining-map" class="dining-map"></div>
+        <p class="dining-map-note">
+          The conference venue is marked in red. Click the map to enable zooming with the scroll wheel.
+        </p>
       </div>
+
+      <div class="card-grid grid-3" id="restaurant-list"></div>
+      <noscript>
+        <p class="prose">
+          The restaurant list requires JavaScript. The full list is available in
+          <a href="data/restaurants.json">data/restaurants.json</a>.
+        </p>
+      </noscript>
     </div>
   </section>
 
@@ -349,6 +280,85 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+          crossorigin="anonymous"></script>
+
+  <!-- Restaurant list and map, both rendered from data/restaurants.json -->
+  <script>
+    (function () {
+      const listEl = document.getElementById('restaurant-list');
+      const mapEl  = document.getElementById('dining-map');
+      if (!listEl || !mapEl) return;
+
+      const esc = (s) => String(s).replace(/[&<>"]/g, c =>
+        ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+
+      const pin = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"'
+        + ' fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"'
+        + ' stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>'
+        + '<circle cx="12" cy="10" r="3"/></svg>';
+
+      fetch('data/restaurants.json')
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(data => {
+          const venue = data.venue, list = data.restaurants;
+
+          // ── Cards ──
+          listEl.innerHTML = list.map(r => `
+            <div class="card">
+              <div class="restaurant-type">${esc(r.type)}</div>
+              <h3 class="restaurant-name">${esc(r.name)}</h3>
+              <p class="restaurant-desc">${esc(r.description)}</p>
+              <div class="restaurant-addr">${pin}${esc(r.address)}</div>
+              <div class="restaurant-walk">${r.walkMinutes} min walk from the venue</div>
+            </div>`).join('');
+
+          // ── Map ──
+          const map = L.map(mapEl, { scrollWheelZoom: false });
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+          map.on('click', () => map.scrollWheelZoom.enable());
+
+          const dot = (colour, radius) => ({
+            radius: radius, color: '#fff', weight: 2,
+            fillColor: colour, fillOpacity: 1
+          });
+
+          const marks = [];
+          const vm = L.circleMarker([venue.lat, venue.lon], dot('#D82418', 10)).addTo(map)
+            .bindPopup(`<strong>${esc(venue.name)}</strong><br>${esc(venue.address)}<br>
+                        <em>Conference venue</em>`);
+          marks.push(vm);
+
+          list.forEach(r => {
+            marks.push(
+              L.circleMarker([r.lat, r.lon], dot('#240C6C', 7)).addTo(map)
+                .bindPopup(`<strong>${esc(r.name)}</strong><br>${esc(r.type)}<br>
+                            ${esc(r.address)}<br><em>${r.walkMinutes} min walk</em>`)
+            );
+          });
+
+          // Set the view straight away — Leaflet renders nothing until it has one.
+          // Then re-fit on the next frame, once the container has its final size,
+          // otherwise the zoom is computed against a stale height.
+          const bounds = L.featureGroup(marks).getBounds();
+          const fit = () => { map.invalidateSize(); map.fitBounds(bounds, { padding: [30, 30] }); };
+          fit();
+          requestAnimationFrame(fit);
+          window.addEventListener('resize', () => map.invalidateSize());
+        })
+        .catch(err => {
+          listEl.innerHTML = '<p class="prose">The restaurant list could not be loaded. '
+            + 'It is available in <a href="data/restaurants.json">data/restaurants.json</a>.</p>';
+          mapEl.style.display = 'none';
+          console.error('restaurants.json:', err);
+        });
+    })();
+  </script>
 
   <script>
     const toggle = document.querySelector('.nav-toggle');

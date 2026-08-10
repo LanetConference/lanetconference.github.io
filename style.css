@@ -922,6 +922,30 @@ a:hover { color: var(--red); }
 }
 .map-embed iframe { display: block; }
 
+/* ── Dining map (Leaflet, fed from data/restaurants.json) ────── */
+.dining-map-wrap { margin-bottom: 32px; }
+.dining-map {
+  height: 420px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--off-white);
+}
+.dining-map-note {
+  font-size: 0.78rem;
+  color: var(--grey-mid);
+  margin-top: 8px;
+}
+.leaflet-container { font-family: var(--font); }
+.leaflet-popup-content { font-size: 0.82rem; line-height: 1.5; color: var(--grey-text); }
+.leaflet-popup-content strong { color: var(--navy-dark); }
+
+.restaurant-walk {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 8px;
+}
+
 /* ── CTA box ─────────────────────────────────────────────────── */
 .cta-box {
   margin-top: 48px;

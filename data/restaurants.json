@@ -1,0 +1,127 @@
+{
+  "venue": {
+    "name": "Centro Cultural UFRGS",
+    "address": "Rua Eng. Luiz Englert, s/n, Porto Alegre, RS, 90040-040",
+    "lat": -30.0343454,
+    "lon": -51.2193791
+  },
+  "restaurants": [
+    {
+      "name": "Restaurante Formosa",
+      "type": "Vegetarian",
+      "description": "Popular vegetarian buffet in the Bom Fim neighbourhood.",
+      "address": "Av. Osvaldo Aranha, 472, Bom Fim",
+      "lat": -30.0326915,
+      "lon": -51.2173906,
+      "walkMinutes": 3
+    },
+    {
+      "name": "Restaurante Suprem",
+      "type": "Vegetarian",
+      "description": "Casual vegetarian buffet in Bom Fim.",
+      "address": "R. Santo Antônio, 877, Bom Fim",
+      "lat": -30.0329677,
+      "lon": -51.2145719,
+      "walkMinutes": 6
+    },
+    {
+      "name": "Restaurante Ocidente",
+      "type": "Vegetarian",
+      "description": "Well-established vegetarian spot on Avenida Osvaldo Aranha.",
+      "address": "Av. Osvaldo Aranha, 960, Bom Fim",
+      "lat": -30.0345038,
+      "lon": -51.2127928,
+      "walkMinutes": 8
+    },
+    {
+      "name": "Café Angélica",
+      "type": "Café",
+      "description": "Charming neighbourhood café ideal for a quick lunch or coffee.",
+      "address": "Rua General João Telles, 301, Bom Fim",
+      "lat": -30.0321445,
+      "lon": -51.2125702,
+      "walkMinutes": 9
+    },
+    {
+      "name": "Ciao Pizzeria Napoletana",
+      "type": "Pizza",
+      "description": "Authentic Neapolitan pizza in a relaxed setting.",
+      "address": "Rua General João Telles, 294, Bom Fim",
+      "lat": -30.0321,
+      "lon": -51.2121789,
+      "walkMinutes": 9
+    },
+    {
+      "name": "Equilibrium Restaurante",
+      "type": "Contemporary",
+      "description": "Contemporary cooking a short walk from the venue, along Avenida Osvaldo Aranha.",
+      "address": "Av. Osvaldo Aranha, 1265, Farroupilha",
+      "lat": -30.0358959,
+      "lon": -51.2109174,
+      "walkMinutes": 10
+    },
+    {
+      "name": "Sambô Sushi",
+      "type": "Japanese",
+      "description": "Sushi and Japanese cuisine in the Bom Fim neighbourhood.",
+      "address": "Rua Fernandes Vieira, 502, Bom Fim",
+      "lat": -30.0337879,
+      "lon": -51.2109522,
+      "walkMinutes": 10
+    },
+    {
+      "name": "Prato Verde",
+      "type": "Vegetarian",
+      "description": "Vegetarian restaurant with a varied daily menu.",
+      "address": "Rua Santa Terezinha, 42, Bom Fim",
+      "lat": -30.0374578,
+      "lon": -51.2110334,
+      "walkMinutes": 11
+    },
+    {
+      "name": "Mercado Brasco",
+      "type": "Market",
+      "description": "Gourmet market and food hall with multiple counters and seating.",
+      "address": "Rua Fernandes Vieira, 286, Bom Fim",
+      "lat": -30.0318454,
+      "lon": -51.2108061,
+      "walkMinutes": 11
+    },
+    {
+      "name": "Restaurante Quintanilha",
+      "type": "Gaúcho",
+      "description": "Classic gaúcho cuisine. Mon–Fri 11:30–14:30; Sat, Sun & holidays 12:00–15:00.",
+      "address": "R. Cel. Vicente, 575, Centro Histórico",
+      "lat": -30.0252572,
+      "lon": -51.2213592,
+      "walkMinutes": 13
+    },
+    {
+      "name": "Press Cais do Porto",
+      "type": "Bar & Restaurant",
+      "description": "Bar and restaurant on the Guaíba waterfront — great views.",
+      "address": "Av. Mauá, 1050, Armazém A7",
+      "lat": -30.0252181,
+      "lon": -51.2269667,
+      "walkMinutes": 16
+    },
+    {
+      "name": "Bourbon Carlos Gomes",
+      "type": "Gaúcho",
+      "description": "High-end gaúcho cuisine with terrace, garden, and local wine list.",
+      "address": "Rua Regente, 499, Bela Vista",
+      "lat": -30.0311196,
+      "lon": -51.1821299,
+      "walkMinutes": 45
+    },
+    {
+      "name": "Le Bistrot",
+      "type": "French",
+      "description": "Classic French bistro with a relaxed atmosphere.",
+      "address": "Alameda Alípio César, 22, Boa Vista",
+      "lat": -30.0263915,
+      "lon": -51.1782899,
+      "walkMinutes": 51
+    }
+  ]
+}
