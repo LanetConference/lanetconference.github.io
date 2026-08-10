@@ -283,22 +283,7 @@
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const menu   = document.querySelector('.nav-menu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        toggle.classList.toggle('open');
-        menu.classList.toggle('open');
-      });
-      document.addEventListener('click', (e) => {
-        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-          toggle.classList.remove('open');
-          menu.classList.remove('open');
-        }
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

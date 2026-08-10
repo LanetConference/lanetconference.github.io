@@ -64,7 +64,7 @@
         </div>
 
         <div class="speaker-card">
-          <img src="speakers/ronaldo.jpeg" alt="Ronaldo Menezes" class="speaker-photo" />
+          <img src="organisers/ronaldo.jpeg" alt="Ronaldo Menezes" class="speaker-photo" />
           <div class="speaker-body">
             <div class="speaker-name"><a href="https://rpmenezes.github.io/index.html" target="_blank" rel="noopener" class="name-link">Ronaldo Menezes</a></div>
             <div class="speaker-affil">University of Exeter, United Kingdom</div>
@@ -161,22 +161,7 @@
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const menu   = document.querySelector('.nav-menu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        toggle.classList.toggle('open');
-        menu.classList.toggle('open');
-      });
-      document.addEventListener('click', (e) => {
-        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-          toggle.classList.remove('open');
-          menu.classList.remove('open');
-        }
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

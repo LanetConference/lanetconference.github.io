@@ -466,7 +466,6 @@ a:hover { color: var(--red); }
 }
 
 .card-grid   { display: grid; gap: 20px; }
-.grid-2      { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-3      { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .grid-4      { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
@@ -1036,7 +1035,6 @@ a:hover { color: var(--red); }
   .info-bar-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
   /* Grids */
-  .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: 1fr 1fr; }
   .committee-grid { grid-template-columns: 1fr; }
