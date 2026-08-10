@@ -321,9 +321,13 @@
 
           // ── Map ──
           const map = L.map(mapEl, { scrollWheelZoom: false });
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          // CARTO Positron: a muted greyscale basemap rendered from OpenStreetMap
+          // data, so the brand-coloured markers carry all the visual weight.
+          L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            subdomains: 'abcd',
+            maxZoom: 20,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+                       + 'contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           }).addTo(map);
           map.on('click', () => map.scrollWheelZoom.enable());
 
