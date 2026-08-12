@@ -567,20 +567,6 @@ a:hover { color: var(--red); }
   border: 3px solid var(--navy);
 }
 
-.committee-photo-placeholder {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--off-white);
-  border: 3px dashed var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--grey-mid);
-  flex-shrink: 0;
-}
-.committee-photo-placeholder svg { width: 42px; height: 42px; }
-
 .committee-role {
   font-size: 0.68rem;
   font-weight: 700;
