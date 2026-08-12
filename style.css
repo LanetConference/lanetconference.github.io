@@ -599,6 +599,10 @@ a:hover { color: var(--red); }
 .prog-table tbody tr:hover td { background: var(--off-white); }
 .time-col { font-weight: 600; color: var(--navy); white-space: nowrap; width: 130px; }
 .chair-col { white-space: nowrap; color: var(--grey-text); width: 90px; }
+.room-col  { white-space: nowrap; color: var(--grey-text); width: 110px; }
+/* The two halves of a parallel slot share a start time, which reads as a typo
+   without a cue; a left edge marks them as one slot running in two rooms. */
+.parallel-row td:first-child { border-left: 3px solid var(--grey-mid); }
 
 /* ── Day navigation bar ─────────────────────────────────────── */
 .day-nav {
@@ -1031,10 +1035,13 @@ a:hover { color: var(--red); }
   .time-col { width: auto; }
   /* The header is hidden when the table stacks, so label the chair inline
      and drop the cell entirely on rows that have no chair. */
-  .chair-col { width: auto; }
+  .chair-col, .room-col { width: auto; }
   .chair-col::before { content: "Chair: "; color: var(--grey-mid); }
+  .room-col::before  { content: "Room: ";  color: var(--grey-mid); }
   /* Needs to out-specify `.prog-table tbody td { display: block }` above. */
-  .prog-table tbody td.chair-col--none { display: none; }
+  .prog-table tbody td.chair-col--none,
+  .prog-table tbody td.room-col--none { display: none; }
+  .parallel-row td:first-child { border-left: none; }
 
   /* Dates list */
   .dates-list li { flex-direction: column; gap: 2px; }
