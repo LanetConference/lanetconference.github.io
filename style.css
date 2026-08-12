@@ -578,67 +578,82 @@ a:hover { color: var(--red); }
 .committee-name { font-size: 1rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 3px; }
 .committee-affil { font-size: 0.83rem; color: var(--grey-text); line-height: 1.5; }
 
-/* ── Programme at a glance ───────────────────────────────────── */
-.glance-wrap { overflow-x: auto; margin-bottom: 48px; padding-bottom: 4px; }
-.glance {
+/* ── Programme at a glance (proportional timetable) ──────────── */
+.tt-wrap { overflow-x: auto; margin-bottom: 48px; padding-bottom: 4px; }
+.tt {
   display: grid;
-  grid-template-columns: repeat(5, minmax(180px, 1fr));
-  gap: 10px;
-  min-width: 900px;
+  /* time axis + five days, each split in two so parallel sessions sit
+     side by side within their day */
+  grid-template-columns: 58px repeat(10, minmax(84px, 1fr));
+  grid-auto-rows: 42px;            /* one row = 30 minutes */
+  gap: 3px;
+  min-width: 940px;
 }
-.glance-day { display: flex; flex-direction: column; gap: 8px; }
-.glance-head {
+.tt-corner { grid-column: 1; grid-row: 1; }
+.tt-head {
+  grid-row: 1;
   background: var(--navy);
   color: var(--white);
   border-radius: var(--radius-sm);
-  padding: 10px 12px;
+  padding: 7px 10px;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
-  line-height: 1.3;
+  justify-content: center;
+  line-height: 1.25;
 }
-.glance-head span {
-  font-weight: 400;
+.tt-head span {
+  font-weight: 400; font-size: 0.68rem; color: var(--grey-light);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.tt-time {
+  grid-column: 1;
   font-size: 0.72rem;
-  color: var(--grey-light);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--grey-mid);
+  border-top: 1px solid var(--border);
+  padding-top: 2px;
 }
-.glance-slot {
+.tt-slot {
   background: var(--white);
   border: 1px solid var(--border);
   border-left: 3px solid var(--grey-mid);
   border-radius: var(--radius-sm);
-  padding: 9px 11px;
-  flex: 1;
+  padding: 5px 8px;
+  overflow: hidden;
+  min-width: 0;
 }
-.glance-time { font-size: 0.72rem; font-weight: 600; color: var(--navy); }
-.glance-name { font-size: 0.82rem; font-weight: 700; color: var(--navy-dark); margin: 2px 0 3px; }
-.glance-room { font-size: 0.7rem; color: var(--grey-mid); }
-.glance-chair { font-size: 0.7rem; color: var(--grey-text); margin-top: 2px; }
+.tt-name  { font-size: 0.76rem; font-weight: 700; color: var(--navy-dark); line-height: 1.2; }
+/* Tight leading: these inherit the body's 1.7, which overflows a 30-min block. */
+.tt-room  { font-size: 0.66rem; color: var(--grey-mid);  line-height: 1.3; }
+.tt-chair { font-size: 0.66rem; color: var(--grey-text); line-height: 1.3; }
 
-/* Session type is carried by the left edge colour. */
-.glance-slot--invited     { border-left-color: var(--navy); background: var(--navy-subtle); }
-.glance-slot--contributed { border-left-color: #4A9B6E; }
-.glance-slot--lightning   { border-left-color: #D9A21B; }
-.glance-slot--poster      { border-left-color: var(--red); }
-.glance-slot--tutorial    { border-left-color: #7A6BB5; }
-.glance-slot--ceremony    { border-left-color: var(--grey-mid); background: var(--off-white); }
-.glance-slot--social      { border-left-color: var(--grey-light); background: var(--off-white); }
+/* Session type carried by the left edge colour. */
+.tt-slot--invited     { border-left-color: var(--navy); background: var(--navy-subtle); }
+.tt-slot--contributed { border-left-color: #4A9B6E; }
+.tt-slot--lightning   { border-left-color: #D9A21B; }
+.tt-slot--poster      { border-left-color: var(--red); }
+.tt-slot--tutorial    { border-left-color: #7A6BB5; }
+.tt-slot--ceremony    { border-left-color: var(--grey-mid); background: var(--off-white); }
+.tt-slot--social      { border-left-color: var(--grey-light); background: var(--off-white); }
+.tt-slot--break {
+  border-left-color: var(--grey-light);
+  background: var(--off-white);
+  border-style: dashed;
+  display: flex; align-items: center;
+}
+.tt-slot--break .tt-name { font-weight: 500; font-size: 0.7rem; color: var(--grey-mid); }
+/* A 30-minute block has room for two lines only; those are all plenary,
+   which the legend already states, so the room line is dropped. */
+.tt-slot--short .tt-room { display: none; }
 
 .glance-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 16px;
-  font-size: 0.75rem;
-  color: var(--grey-text);
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin-bottom: 16px; font-size: 0.75rem; color: var(--grey-text);
 }
 .glance-legend span { display: flex; align-items: center; gap: 6px; }
-.glance-legend i {
-  width: 12px; height: 12px; border-radius: 3px; display: inline-block; font-style: normal;
-}
+.glance-legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; font-style: normal; }
 
 /* ── Programme table ─────────────────────────────────────────── */
 .prog-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
