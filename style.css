@@ -944,6 +944,15 @@ a:hover { color: var(--red); }
 .section-header--tight  { margin-bottom: 20px; }
 .section-header--center { text-align: center; }
 
+/* ── Service credit / acknowledgement note ───────────────────── */
+.credit-note {
+  font-style: italic;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--grey-mid);
+  margin-top: 24px;
+}
+
 /* ── Section-title size modifiers ────────────────────────────── */
 .section-title--sm { font-size: 1.1rem; }
 .section-title--md { font-size: 1.2rem; }
