@@ -630,7 +630,7 @@ a:hover { color: var(--red); }
 .tt-chair { font-size: 0.66rem; color: var(--grey-text); line-height: 1.3; }
 
 /* Session type carried by the left edge colour. */
-.tt-slot--invited     { border-left-color: var(--navy); background: var(--navy-subtle); }
+.tt-slot--keynote     { border-left-color: var(--navy); background: var(--navy-subtle); }
 .tt-slot--contributed { border-left-color: #4A9B6E; }
 .tt-slot--lightning   { border-left-color: #D9A21B; }
 .tt-slot--poster      { border-left-color: var(--red); }
