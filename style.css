@@ -508,21 +508,6 @@ a:hover { color: var(--red); }
   border: 3px solid var(--navy);
 }
 
-.speaker-photo-placeholder {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: var(--off-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--border);
-  margin: 28px auto 0;
-  border: 3px dashed var(--border);
-}
-
-.speaker-photo-placeholder svg { width: 56px; height: 56px; }
-
 .speaker-body { padding: 20px; text-align: center; }
 .speaker-name { font-size: 1rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 3px; }
 .speaker-affil { font-size: 0.82rem; color: var(--grey-text); margin-bottom: 8px; }
