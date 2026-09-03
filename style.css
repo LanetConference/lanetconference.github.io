@@ -573,6 +573,40 @@ a:hover { color: var(--red); }
 .committee-name { font-size: 1rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 3px; }
 .committee-affil { font-size: 0.83rem; color: var(--grey-text); line-height: 1.5; }
 
+/* Optional row of profile links under a member's affiliation. With a two-line
+   affiliation the text column now outgrows the 100px photo, so a card with
+   links stands ~28px taller than one without; grid stretch keeps the pair in
+   a row level with each other. */
+.committee-social {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+  margin-left: -5px;          /* pull the first chip back to the text edge */
+}
+
+.committee-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  transition: background var(--ease);
+}
+.committee-social a:hover { background: var(--red); }
+
+/* The source icons are a single flat colour, so brightness(0) flattens them
+   to black to tint with opacity, and invert(1) flips them white on hover. */
+.committee-social img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.42;
+  transition: opacity var(--ease), filter var(--ease);
+}
+.committee-social a:hover img { filter: brightness(0) invert(1); opacity: 1; }
+
 /* ── Programme at a glance (proportional timetable) ──────────── */
 .tt-wrap { overflow-x: auto; margin-bottom: 48px; padding-bottom: 4px; }
 .tt {
@@ -1109,6 +1143,7 @@ a:hover { color: var(--red); }
 
   /* Committee card */
   .committee-card { flex-direction: column; text-align: center; }
+  .committee-social { justify-content: center; margin-left: 0; }
 
   /* Footer */
   .footer-grid { flex-direction: column; align-items: center; gap: 20px; }
