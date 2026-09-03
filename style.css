@@ -436,6 +436,21 @@ a:hover { color: var(--red); }
   pointer-events: none;
 }
 
+/* Animated network canvas (hero-network.js). It sits below .page-hero::after
+   and below .container, which is already z-index:1, so the title stays on top.
+   The mask keeps it faint behind the text and lets it build up towards the
+   right, where the ::after highlight already sits. */
+.hero-net {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,1) 58%);
+          mask-image: linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,1) 58%);
+}
+
 .page-hero .container { position: relative; z-index: 1; }
 
 .page-hero-title {
