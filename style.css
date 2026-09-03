@@ -458,12 +458,7 @@ a:hover { color: var(--red); }
   font-weight: 800;
   color: var(--white);
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-
-.page-hero-lead {
-  font-size: 0.95rem;
-  color: var(--grey-mid);
+  margin-bottom: 0;
 }
 
 /* ── Cards ──────────────────────────────────────────────────── */
