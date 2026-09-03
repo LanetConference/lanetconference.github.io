@@ -800,6 +800,12 @@ a:hover { color: var(--red); }
 }
 .host-item img:hover { opacity: 1; }
 .host-item span { display: block; font-size: 0.8rem; color: var(--grey-text); max-width: 220px; }
+/* Logo sizing. Qualified by `.host-item img` so these beat the 88px above. */
+.host-item img.host-logo { height: 52px; max-width: 200px; object-fit: contain; }
+/* The Cátedra lockup is 5.3:1, far wider than the others; a slightly wider cap
+   lands it on the same drawn height as Constructor rather than well under it. */
+.host-item img.host-logo--wide { max-width: 220px; }
+.host-item img.host-logo--lg { height: 160px; max-width: none; }
 
 /* ── Sticky sidebar card ─────────────────────────────────────── */
 .sticky-card { position: sticky; top: 80px; }
