@@ -573,18 +573,24 @@ a:hover { color: var(--red); }
 .committee-name { font-size: 1rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 3px; }
 .committee-affil { font-size: 0.83rem; color: var(--grey-text); line-height: 1.5; }
 
-/* Optional row of profile links under a member's affiliation. With a two-line
-   affiliation the text column now outgrows the 100px photo, so a card with
-   links stands ~28px taller than one without; grid stretch keeps the pair in
-   a row level with each other. */
-.committee-social {
+/* Optional row of profile links, on committee cards under the affiliation and
+   on speaker cards under the talk title. On a committee card with a two-line
+   affiliation the text column outgrows the 100px photo, so a card with links
+   stands ~28px taller than one without; grid stretch keeps a row level. */
+.committee-social,
+.speaker-social {
   display: flex;
   gap: 4px;
   margin-top: 8px;
-  margin-left: -5px;          /* pull the first chip back to the text edge */
 }
 
-.committee-social a {
+/* Committee text is left-aligned, so pull the first chip back to the text
+   edge; speaker cards are centred, so the row centres instead. */
+.committee-social { margin-left: -5px; }
+.speaker-social   { justify-content: center; margin-top: 12px; }
+
+.committee-social a,
+.speaker-social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -593,11 +599,13 @@ a:hover { color: var(--red); }
   border-radius: 50%;
   transition: background var(--ease);
 }
-.committee-social a:hover { background: var(--red); }
+.committee-social a:hover,
+.speaker-social a:hover { background: var(--red); }
 
 /* The source icons are a single flat colour, so brightness(0) flattens them
    to black to tint with opacity, and invert(1) flips them white on hover. */
-.committee-social img {
+.committee-social img,
+.speaker-social img {
   width: 15px;
   height: 15px;
   object-fit: contain;
@@ -605,7 +613,8 @@ a:hover { color: var(--red); }
   opacity: 0.42;
   transition: opacity var(--ease), filter var(--ease);
 }
-.committee-social a:hover img { filter: brightness(0) invert(1); opacity: 1; }
+.committee-social a:hover img,
+.speaker-social a:hover img { filter: brightness(0) invert(1); opacity: 1; }
 
 /* ── Programme at a glance (proportional timetable) ──────────── */
 .tt-wrap { overflow-x: auto; margin-bottom: 48px; padding-bottom: 4px; }
