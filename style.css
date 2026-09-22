@@ -19,6 +19,9 @@
   --grey-mid:    #948AB0;
   --grey-text:   #554A75;
   --text:        #1B152B;
+  /* Sponsor tier label. Darker than a literal bronze so the small uppercase
+     type still clears AA on white (5.8:1) and on --off-white (5.5:1). */
+  --bronze:      #8C5A2B;
 
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 
@@ -853,6 +856,20 @@ a:hover { color: var(--red); }
 }
 .host-item img:hover { opacity: 1; }
 .host-item span { display: block; font-size: 0.8rem; color: var(--grey-text); max-width: 220px; }
+
+/* ── Sponsor tiers ───────────────────────────────────────────── */
+/* One block per tier, each a label above a .host-row of logos, so further
+   tiers can be added by repeating the block. */
+.sponsor-tier + .sponsor-tier { margin-top: 44px; }
+.sponsor-tier .host-row { margin-top: 14px; }
+
+.sponsor-tier-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
 /* Logo sizing. Qualified by `.host-item img` so these beat the 88px above. */
 .host-item img.host-logo { height: 52px; max-width: 200px; object-fit: contain; }
 /* The Cátedra lockup is 5.3:1, far wider than the others; a slightly wider cap
