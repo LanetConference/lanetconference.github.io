@@ -19,9 +19,11 @@
   --grey-mid:    #948AB0;
   --grey-text:   #554A75;
   --text:        #1B152B;
-  /* Sponsor tier label. Darker than a literal bronze so the small uppercase
-     type still clears AA on white (5.8:1) and on --off-white (5.5:1). */
+  /* Sponsor tier labels. Both are darker than the literal metal so the small
+     uppercase type clears AA on white and on --off-white: bronze 5.8/5.5,
+     silver 5.0/4.7. A true silver would sit near 2.5 and fail. */
   --bronze:      #8C5A2B;
+  --silver:      #66707E;
 
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 
@@ -868,14 +870,18 @@ a:hover { color: var(--red); }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--bronze);
 }
+.sponsor-tier-title--silver { color: var(--silver); }
+.sponsor-tier-title--bronze { color: var(--bronze); }
 /* Logo sizing. Qualified by `.host-item img` so these beat the 88px above. */
 .host-item img.host-logo { height: 52px; max-width: 200px; object-fit: contain; }
 /* The Cátedra lockup is 5.3:1, far wider than the others; a slightly wider cap
    lands it on the same drawn height as Constructor rather than well under it. */
 .host-item img.host-logo--wide { max-width: 220px; }
 .host-item img.host-logo--lg { height: 160px; max-width: none; }
+/* Silver draws larger than bronze so the tiers read as a hierarchy: 219x64
+   against 200x51. Must follow .host-logo -- same specificity, later wins. */
+.host-item img.host-logo--silver { height: 64px; max-width: 240px; }
 
 /* ── Sticky sidebar card ─────────────────────────────────────── */
 .sticky-card { position: sticky; top: 80px; }
